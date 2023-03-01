@@ -1,7 +1,10 @@
-const Home = () => {
+import { useState } from "react";
 
-  const handleClick = (e) => {
-    console.log("Here's the event: ", e);
+const Home = () => {
+  const [name, setName] = useState("Mario");
+
+  const handleClick = () => {
+    setName("Luigi");
   }
 
   const handleOtherClick = (name, e) => {
@@ -11,6 +14,7 @@ const Home = () => {
   return (
     <div className="home">
       <h2>Homepage</h2>
+      <p>{name}</p>
       <button onClick={handleClick}>Click me!</button>
       <button onClick={(e) => {
         handleOtherClick("Lea", e);
