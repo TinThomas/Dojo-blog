@@ -11,9 +11,6 @@ function App() {
       <Navbar />
       <div className="content">
         <h1>{title}</h1>
-        <p>Liked {likes} times</p>
-
-        <p>{Math.random() * 10}</p>
 
         <a href={link}>Google homepage</a>
       </div>
