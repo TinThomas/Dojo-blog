@@ -12,6 +12,8 @@ const Home = () => {
       console.log(data);
       setBlogs(data);
       setIsLoading(false);
+    }).catch((err) => {
+      console.log(err.message);
     })
   }, []);
 
