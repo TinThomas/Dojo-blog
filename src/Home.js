@@ -4,6 +4,7 @@ import BlogList from "./BlogList";
 const Home = () => {
   const [blogs, setBlogs] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:8000/blogs").then(res => {
@@ -15,13 +16,16 @@ const Home = () => {
       console.log(data);
       setBlogs(data);
       setIsLoading(false);
+      setError(null);
     }).catch((err) => {
-      console.log(err.message);
+      setError(err.message);
+      setIsLoading(false);
     })
   }, []);
 
   return (
     <div className="home">
+      {error && <div>{error}</div>}
       {isLoading && <div>Loading...</div>}
       {blogs && <BlogList blogs={blogs} title="All blogs"/>}
       {blogs && <BlogList blogs={blogs.filter((blog) => blog.author === "Thomas")} title="Thomas' blogs"/>}
