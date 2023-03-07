@@ -17,6 +17,12 @@
       "body": "hello there",
       "author": "Thomas",
       "id": 3
+    },
+    {
+      "title": "Another blog",
+      "body": "also a blog",
+      "author": "Thomas",
+      "id": 4
     }
   ]
 }
