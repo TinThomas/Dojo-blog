@@ -23,6 +23,12 @@
       "body": "also a blog",
       "author": "Thomas",
       "id": 4
+    },
+    {
+      "title": "Yet another blog",
+      "body": "This one is good",
+      "author": "Lea",
+      "id": 5
     }
   ]
 }
